@@ -8,10 +8,6 @@
  * Controller of the dockerToolsApp
  */
 angular.module('dockerToolsApp')
-  .controller('TemplatesCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('TemplatesCtrl', function ($scope) {
+    $scope.templates=true;
   });

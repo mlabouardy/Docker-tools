@@ -15,15 +15,15 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'restangular'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, RestangularProvider) {
+
+    RestangularProvider.setBaseUrl('http://51.254.132.239:4243');
+    
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/dashboard', {
         templateUrl: 'views/dashboard.html',
         controller: 'DashboardCtrl'
       })
@@ -38,6 +38,10 @@ angular
       .when('/templates', {
         templateUrl: 'views/templates.html',
         controller: 'TemplatesCtrl'
+      })
+      .when('/container/:id', {
+        templateUrl: 'views/container-view.html',
+        controller: 'ContainerViewCtrl'
       })
       .otherwise({
         redirectTo: '/'
