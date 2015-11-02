@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'restangular'
+    'restangular',
+     'ng-oboe'
   ])
   .config(function ($routeProvider, RestangularProvider) {
 
@@ -42,6 +43,7 @@ angular
       .when('/container/:id', {
         templateUrl: 'views/container-view.html',
         controller: 'ContainerViewCtrl'
+        
       })
       .otherwise({
         redirectTo: '/'

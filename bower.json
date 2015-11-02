@@ -13,7 +13,10 @@
     "slimScroll": "slimscroll#~1.3.6",
     "metisMenu": "~2.2.0",
     "Chart.js": "chartjs#~1.0.2",
-    "restangular": "~1.5.1"
+    "restangular": "~1.5.1",
+    "oboe": "~2.1.2",
+    "flot-charts": "*",
+    "angular-oboe": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"

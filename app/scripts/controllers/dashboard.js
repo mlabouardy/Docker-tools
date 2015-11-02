@@ -47,5 +47,5 @@
  		var context = document.getElementById('lineChart').getContext('2d');
  		var skillsChart = new Chart(context).Pie(pieData);
  	});
- 	
+
  });
