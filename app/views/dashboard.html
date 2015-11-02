@@ -8,7 +8,7 @@
  					</div>
  					<div class="col-xs-8 text-right">
  						<span> Containers </span>
- 						<h2 class="font-bold">26</h2>
+ 						<h2 class="font-bold">{{nbrOfContainers}}</h2>
  					</div>
  				</div>
  			</div>
@@ -21,7 +21,7 @@
  					</div>
  					<div class="col-xs-8 text-right">
  						<span> Images </span>
- 						<h2 class="font-bold">26'C</h2>
+ 						<h2 class="font-bold">{{nbrOfImages}}</h2>
  					</div>
  				</div>
  			</div>
@@ -55,7 +55,7 @@
 
  	</div>
  	<div class="row">
- 		<div class="col-lg-6">
+ 		<div class="col-lg-4">
  			<div class="ibox float-e-margins">
  				<div class="ibox-title">
  					<h5>Containers</h5>
@@ -68,18 +68,31 @@
  				</div>
  			</div>
  		</div>
- 		<div class="col-lg-6">
- 			<div class="ibox float-e-margins">
- 				<div class="ibox-title">
- 					<h5>CPU Usage</h5>
- 					<div ibox-tools></div>
- 				</div>
- 				<div class="ibox-content">
- 					<div>
- 						<div id="barChart" style="width:440px;height:145px"></div>
- 					</div>
- 				</div>
- 			</div>
- 		</div>
+ 		 <div class="col-lg-4">
+                    <div class="widget lazur-bg p-xl">
+
+                                <h2>
+                                    {{name}}
+                                </h2>
+                        <ul class="list-unstyled m-t-md">
+                            <li>
+                                <span class="fa fa-linux m-r-xs"></span>
+                                <label>OS:</label>
+                                {{os}}
+                            </li>
+                            <li>
+                                <span class="fa fa-cog m-r-xs"></span>
+                                <label>Kernel:</label>
+                                {{kernel}}
+                            </li>
+                            <li>
+                                <span class="fa fa-hdd-o m-r-xs"></span>
+                                <label>Driver:</label>
+                                {{driver}}
+                            </li>
+                        </ul>
+
+                    </div>
+
  	</div>
  </div>

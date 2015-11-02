@@ -8,8 +8,17 @@
  * Controller of the dockerToolsApp
  */
  angular.module('dockerToolsApp')
- .controller('DashboardCtrl', function ($scope, Containers) {
+ .controller('DashboardCtrl', function ($scope, Containers, Docker) {
  	$scope.dashboard=true;
+
+ 	Docker.one().get().then(function(information){
+ 		$scope.nbrOfContainers=information.Containers;
+ 		$scope.nbrOfImages=information.Images;
+ 		$scope.name=information.Name;
+ 		$scope.os=information.OperatingSystem;
+ 		$scope.kernel=information.KernelVersion;
+ 		$scope.driver=information.Driver;
+ 	});
 
  	Containers.getList().then(function(containers){
  		var exited=0;
