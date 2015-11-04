@@ -1,0 +1,33 @@
+{
+  "name": "docker-tools",
+  "version": "1.0.0",
+  "description": "Docker UI to manager containers/images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mlabouardy/Docker-tools"
+  },
+  "keywords": [
+    "Docker",
+    "containers",
+    "images",
+    "devop",
+    "cloud"
+  ],
+  "author": "Mohamed Labouardy",
+  "license": "Open Source",
+  "bugs": {
+    "url": "https://github.com/mlabouardy/Docker-tools/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.3",
+    "mongoose": "~4.2.4",
+    "resourcejs": "~1.0.0",
+    "method-override": "~2.3.5",
+    "body-parser": "~1.14.1",
+    "lodash": "~3.10.1"
+  }
+}
