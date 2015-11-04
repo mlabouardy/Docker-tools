@@ -8,10 +8,10 @@
  * Controller of the dashboardApp
  */
 angular.module('dashboardApp')
-  .controller('LoginCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('LoginCtrl', function ($scope, UserService) {
+    	$scope.login=function(){
+    		UserService.loginUser($scope.user,function(response){
+    			console.log('response '+response);
+    		});
+    	};
   });
