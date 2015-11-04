@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name dashboardApp.controller:AboutCtrl
+ * @name dashboardApp.controller:DashboardCtrl
  * @description
- * # AboutCtrl
+ * # DashboardCtrl
  * Controller of the dashboardApp
  */
 angular.module('dashboardApp')
-  .controller('AboutCtrl', function () {
+  .controller('DashboardCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
