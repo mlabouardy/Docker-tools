@@ -1,0 +1,189 @@
+ <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>{{container.Name}}</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a ng-href="#/containers">Containers</a>
+            </li>
+            <li class="active">
+                <strong>Information</strong>
+            </li>
+        </ol>
+        <br/>
+        <div class="button-group pull-left">
+        	<a class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="Restart a container"><i class="fa fa-retweet"></i></a>
+        	<a class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Start a container"><i class="fa fa-play"></i></a>
+        	<a class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Kill a container"><i class="fa fa-trash-o"></i></a>
+        	<a class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Stop a container"><i class="fa fa-ban"></i></a>
+        </div>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+ 	<div class="row">
+ 		<div class="col-lg-6">
+ 			<div class="ibox float-e-margins">
+ 				<div class="ibox-title">
+ 					<h5>Containers</h5>
+ 					<div ibox-tools></div>
+ 				</div>
+ 				<div class="ibox-content">
+ 					<div>
+ 						<canvas id="lineChart" height="140"></canvas>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<div class="col-lg-6">
+ 			<div class="ibox float-e-margins">
+ 				<div class="ibox-title">
+ 					<h5>Running processes</h5>
+ 					<div ibox-tools></div>
+ 				</div>
+ 				<div class="ibox-content">
+ 					<div>
+ 						<table class="table table-bordered table-hover">
+ 							<thead>
+ 								<tr>
+ 									<th>Name</th>
+ 								<tr>
+ 							</thead>
+ 							<tbody>
+ 								<tr ng-repeat="pro in processes">
+ 									<td>{{pro.name}}</td>
+ 								</tr>
+ 							</tbody>
+ 						</table>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<div class="row">
+ 		<div class="col-lg-6">
+ 			<div class="ibox float-e-margins">
+ 				<div class="ibox-title">
+ 					<h5>File systems</h5>
+ 					<div ibox-tools></div>
+ 				</div>
+ 				<div class="ibox-content">
+ 					<canvas id="filesystems" height="140"></canvas>
+ 				</div>
+ 			</div>
+ 		</div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>CPU Usage</h5>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div id="cpuUsage" style="width:450px;height:145px"></div>
+                </div>
+            </div>
+        </div>
+ 	</div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Memory Usage</h5>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div id="memoryUsage" style="width:450px;height:145px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>IO Usage</h5>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div id="ioUsage" style="width:450px;height:145px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Pages faults</h5>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div id="pgfaultsUsage" style="width:450px;height:145px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>I dont know</h5>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div id="o" style="width:450px;height:145px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 	<div class="row">
+ 		<div class="col-lg-12">
+ 			<div class="ibox float-e-margins">
+ 				<div class="ibox-title">
+ 					<h5>Logs</h5>
+ 					<div ibox-tools></div>
+ 				</div>
+ 				<div class="ibox-content">
+ 					<div>
+ 						<p>{{logs}}</p>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	<div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+ 	<div class="row">
+ 		<div class="col-lg-12">
+ 			<div class="ibox float-e-margins">
+ 				<div class="ibox-title">
+ 					<h5>Environnement variables</h5>
+ 					<div ibox-tools></div>
+ 				</div>
+ 				<div class="ibox-content">
+ 					<div>
+ 						<table class="table table-bordered table-hover">
+ 							<thead>
+ 								<tr>
+ 									<th>Name</th>
+ 									<th>Value</th>
+ 								</tr>
+ 							</thead>
+ 							<tbody>
+ 								<tr ng-repeat="env in envs">
+ 									<td>{{env.name}}</td>
+ 									<td>{{env.value}}</td>
+ 								</tr>
+ 							</tbody>
+ 						</table>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	<div>
+</div>
+
+<script>
+$(document).ready(function(){
+     $('[data-toggle="tooltip"]').tooltip()
+});
+</script>

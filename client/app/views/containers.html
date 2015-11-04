@@ -1,0 +1,47 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="ibox float-e-margins">
+				<div class="ibox-title">
+					<h5>List of containers</h5>
+					<div class="ibox-tools">
+						<a class="collapse-link"> <i class="fa fa-chevron-up"></i>
+						</a>
+					</div>
+				</div>
+				<div class="ibox-content">
+
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Image</th>
+									<th>Created</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="container in containers">
+									<td><a ng-href="#/container/{{container.Id}}" class="btn btn-success btn-xs"><i class="fa fa-folder-open-o"></i> View</a> {{container.Name}}</td>
+									<td>{{container.Image}}</td>
+									<td>{{container.CreatedAt}}</td>
+									<td><div ng-bind-html="container.Status"></div></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th>Name</th>
+									<th>Image</th>
+									<th>Created</th>
+									<th>Status</th>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

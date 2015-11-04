@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Docker tools</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="styles/animate.css" rel="stylesheet">
+  <link href="styles/style.css" rel="stylesheet">
+
+
+  <!-- endbuild -->
+</head>
+<body ng-app="dockerToolsApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <div id="wrapper">
+        
+        <div ng-include src="'views/sidebar.html'"></div>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+          <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation"
+            style="margin-bottom: 0">
+            <div class="navbar-header">
+              <a class="navbar-minimalize minimalize-styl-2 btn btn-primary "
+              href="#"><i class="fa fa-bars"></i> </a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+
+              <li><a href="/logout"> <i class="fa fa-sign-out"></i> Logout </a></li>
+            </ul>
+
+          </nav>
+        </div>
+
+        <div ng-view=""></div>
+
+      </div>
+      
+      <!--  <div ng-include src="'views/footer.html'"></div>  -->
+
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+    !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+     (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+     r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+   }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-XXXXX-X');
+   ga('send', 'pageview');
+   </script>
+
+   <!-- build:js(.) scripts/vendor.js -->
+   <!-- bower:js -->
+   <script src="bower_components/jquery/dist/jquery.js"></script>
+   <script src="bower_components/angular/angular.js"></script>
+   <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+   <script src="bower_components/angular-animate/angular-animate.js"></script>
+   <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+   <script src="bower_components/angular-resource/angular-resource.js"></script>
+   <script src="bower_components/angular-route/angular-route.js"></script>
+   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+   <script src="bower_components/angular-touch/angular-touch.js"></script>
+   <script src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+   <script src="bower_components/metisMenu/dist/metisMenu.js"></script>
+   <script src="bower_components/Chart.js/Chart.js"></script>
+   <script src="bower_components/lodash/lodash.js"></script>
+   <script src="bower_components/restangular/dist/restangular.js"></script>
+   <script src="bower_components/oboe/dist/oboe-browser.js"></script>
+   <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+   <script src="bower_components/flot/jquery.flot.js"></script>
+   <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+   <script src="bower_components/angular-oboe/dist/angular-oboe.js"></script>
+   <script src="bower_components/footable/src/js/FooTable.js"></script>
+   <!-- endbower -->
+   <!-- endbuild -->
+
+   <!-- build:js({.tmp,app}) scripts/scripts.js -->
+   <script src="scripts/plugins/ng-oboe.js"></script>
+   <script src="scripts/app.js"></script>
+   <script src="scripts/controllers/dashboard.js"></script>
+   <script src="scripts/controllers/containers.js"></script>
+   <script src="scripts/controllers/images.js"></script>
+   <script src="scripts/controllers/templates.js"></script>
+   <script src="scripts/services/imagesFactory.js"></script>
+   <script src="scripts/services/containersFactory.js"></script>
+   <script src="scripts/services/containerStatsFactory.js"></script>
+   <script src="scripts/controllers/container-view.js"></script>
+   
+   <script src="scripts/services/dockerFactory.js"></script>
+   <script src="scripts/controllers/image-view.js"></script>
+   <!-- endbuild -->
+   <!-- Mainly scripts -->
+  <script src="http://webapplayers.com/inspinia_admin-v2.3/js/inspinia.js"></script>
+
+ </body>
+ </html>
