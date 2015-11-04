@@ -8,7 +8,7 @@
  * Controller of the dockerToolsApp
  */
  angular.module('dockerToolsApp')
- .controller('DashboardCtrl', function ($scope, Containers, Docker) {
+ .controller('DashboardCtrl', function ($scope, Containers, Docker, ContainerStats) {
  	$scope.dashboard=true;
 
  	Docker.one().get().then(function(information){
@@ -18,6 +18,30 @@
  		$scope.os=information.OperatingSystem;
  		$scope.kernel=information.KernelVersion;
  		$scope.driver=information.Driver;
+ 		$scope.used=information.DriverStatus[5][1];
+ 		$scope.available=information.DriverStatus[7][1];
+
+
+ 		var pieData = [
+ 		{
+ 			value: $scope.used,
+ 			label: 'Used data space',
+ 			color: '#1AB394'
+ 		},
+ 		{
+ 			value: $scope.available,
+ 			label: 'Available data space',
+ 			color: '#F8AC59'
+ 		}
+ 		];
+
+ 		
+ 		var context2 = document.getElementById('lineChart2').getContext('2d');
+ 		var skillsChart2 = new Chart(context2).Doughnut(pieData);
+ 	});
+
+ 	ContainerStats.one("json").getList().then(function(runningContainers){
+ 		$scope.running=runningContainers;
  	});
 
  	Containers.getList().then(function(containers){

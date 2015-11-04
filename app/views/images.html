@@ -23,7 +23,7 @@
 							</thead>
 							<tbody>
 								<tr ng-repeat="image in images">
-									<td>{{image.Name}}</td>
+									<td><a ng-href="#/image/{{image.Id}}" class="btn btn-success btn-xs"><i class="fa fa-folder-open-o"></i> View</a> {{image.Name}}</td>
 									<td>{{image.Tag}}</td>
 									<td>{{image.VirtualSize | number:1}} Mb</td>
 									<td>{{image.CreatedAt}}</td>

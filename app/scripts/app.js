@@ -45,6 +45,10 @@ angular
         controller: 'ContainerViewCtrl'
         
       })
+      .when('/image/:id', {
+        templateUrl: 'views/image-view.html',
+        controller: 'ImageViewCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,3 +1,4 @@
+'use strict';
 
 angular.module('dockerToolsApp')
   .factory('ContainersRestangular',function(Restangular){

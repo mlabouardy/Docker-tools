@@ -23,7 +23,7 @@
 							</thead>
 							<tbody>
 								<tr ng-repeat="container in containers">
-									<td><a ng-href="#/container/{{container.Id}}">{{container.Name}}<a></td>
+									<td><a ng-href="#/container/{{container.Id}}" class="btn btn-success btn-xs"><i class="fa fa-folder-open-o"></i> View</a> {{container.Name}}</td>
 									<td>{{container.Image}}</td>
 									<td>{{container.CreatedAt}}</td>
 									<td><div ng-bind-html="container.Status"></div></td>
