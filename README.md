@@ -3,14 +3,14 @@ UI to manager docker containers/images
 
 #Technology Stack
 
-MongoDB
-ExpressJS
-AngularJS
-NodeJS
-Bootstrap
-PasspostJS
-ChartJS
-Rest-Angular
+MongoDB <br/>
+ExpressJS<br/>
+AngularJS<br/>
+NodeJS<br/>
+Bootstrap<br/>
+PasspostJS<br/>
+ChartJS<br/>
+Rest-Angular<br/>
 
 # Preview
 
