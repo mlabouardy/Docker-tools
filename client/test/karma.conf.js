@@ -41,6 +41,7 @@ module.exports = function(config) {
       'bower_components/flot/jquery.flot.js',
       'bower_components/jquery-ui/jquery-ui.js',
       'bower_components/angular-oboe/dist/angular-oboe.js',
+      'bower_components/footable/src/js/FooTable.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

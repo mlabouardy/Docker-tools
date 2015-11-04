@@ -22,7 +22,7 @@
  		$scope.available=information.DriverStatus[7][1];
 
 
- 		var pieData = [
+ 		var pieData2 = [
  		{
  			value: $scope.used,
  			label: 'Used data space',
@@ -35,9 +35,9 @@
  		}
  		];
 
- 		
+
  		var context2 = document.getElementById('lineChart2').getContext('2d');
- 		var skillsChart2 = new Chart(context2).Doughnut(pieData);
+ 		var skillsChart2 = new Chart(context2).Doughnut(pieData2);
  	});
 
  	ContainerStats.one("json").getList().then(function(runningContainers){
